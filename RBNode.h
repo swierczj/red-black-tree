@@ -1,10 +1,12 @@
 #ifndef RBTREE_RBNODE_H
 #define RBTREE_RBNODE_H
 
+#include "RedBlackTree.h"
+
 namespace tree_map
 {
     template<typename keyType, typename mappedType>
-    class RBNode
+    class RedBlackTree<>::RBNode
     {
 
     };
