@@ -2,11 +2,11 @@
 #define RBTREE_RBNODE_H
 
 #include "RedBlackTree.h"
-
+// TODO: FILE PROBABLY TO DELETE
 namespace tree_map
 {
     template<typename keyType, typename mappedType>
-    class RedBlackTree<>::RBNode
+    struct RedBlackTree::RBNode
     {
 
     };
