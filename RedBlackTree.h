@@ -46,12 +46,36 @@ namespace tree_map
 
             if(!root) // if tree's empty
             {
+                root = nodePtr;
                 nodePtr->leftChild = sentinel;
                 nodePtr->rightChild = sentinel;
                 nodePtr->nodeColor = BLACK;
-                root = nodePtr;
                 ++treeSize;
             }
+            else
+            {
+                auto newNodePlace = findNode(key);
+            }
+        }
+
+        /**
+         * Looking for a node in tree with given key, if not found then nullptr is returned.
+         * @param key
+         * @return pointer to node containing key
+         */
+        RBNode* findNode( const keyType& key )
+        {
+            RBNode* temp = root;
+            
+            while( temp || temp != sentinel )
+            {
+                if( key > temp->nodeData.first )
+                    temp = temp->rightChild;
+                else if( key < temp->nodeData.first )
+                    temp = temp->leftChild;
+            }
+
+            return temp;
         }
     public:
         RedBlackTree()
